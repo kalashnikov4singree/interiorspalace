@@ -83,10 +83,20 @@
     color: #fff;
     font-size: 52px;
 }
+.background-inner-page{
+    height: 450px;
+    background-attachment: fixed;
+    background-repeat: no-repeat
+}
 .content .live-tile {
     width: 50%;
     margin: 0;
     height: 295px;
+}
+.content .live-tile .background{
+    background-size: cover;
+    background-position:center;
+    height: 100%
 }
 .content .tile-group.four-wide, .content  .tile-strip.four-wide{
     width: 100%;
@@ -103,6 +113,19 @@
 }
 .content .projects .commercial .title-block {
     border-left:1px solid #d00355;
+}
+.content-inner-page{
+    color: #393e45;
+    font-family: 'Raleway', sans-serif;
+    padding: 60px 0;
+}
+.content-inner-page .title-inner-page{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 45px;
+}
+
+.content-inner-page .text{
 }
 .map-feedback{
     padding: 120px 0;
