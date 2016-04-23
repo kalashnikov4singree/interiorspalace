@@ -113,6 +113,11 @@
     font-family: 'Roboto', sans-serif;
     padding: 0 10px 0 10px;
 }
+@media (max-width: 991px){
+    .footer .hours-operation{
+        margin-bottom: 20px;
+    }
+}
 @media (max-width: 767px) {
     .header .navbar-nav{
         width: 100%;
