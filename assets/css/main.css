@@ -91,6 +91,69 @@
 .content .tile-group.four-wide, .content  .tile-strip.four-wide{
     width: 100%;
 }
+.content .projects .title-block{
+    color: #777;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 20px 0 10px 0;
+    font-family: 'PT Sans', sans-serif;
+}
+.content .projects .residential .title-block{
+    border-right:1px solid #d00355;
+}
+.content .projects .commercial .title-block {
+    border-left:1px solid #d00355;
+}
+.map-feedback{
+    padding: 120px 0;
+    background: url("../images/map.jpg");
+    background-size: cover;
+}
+.map-feedback .form-feedback{
+    width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 35px 15px;
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    font-size: 16px;
+}
+.map-feedback .header-form-feedback{
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+.map-feedback .header-form-feedback .item-address{
+    margin-bottom: 20px;
+}
+.map-feedback .header-form-feedback .item-address span{
+    text-transform: uppercase;
+}
+.form-feedback .form-group .form-control{
+   height: 50px;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+}
+.form-feedback .form-group .form-control:focus{
+    border-color: #ccc;
+}
+.form-feedback .form-group textarea{
+    max-height: 150px;
+    min-height: 150px;
+    max-width: 100%;
+}
+.form-feedback .submit{
+    background-color: #303030;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    height: 45px;
+    width: 165px;
+    border: none;
+    outline: none;
+}
 /*FOOTER*/
 .footer{
     padding: 20px 15px;
@@ -114,9 +177,13 @@
     padding: 0 10px 0 10px;
 }
 @media (max-width: 991px){
+    .content .live-tile{
+        height: 200px;
+    }
     .footer .hours-operation{
         margin-bottom: 20px;
     }
+
 }
 @media (max-width: 767px) {
     .header .navbar-nav{
@@ -138,6 +205,14 @@
     }
     .content .live-tile {
         height: 155px;
+    }
+    .map-feedback{
+        padding: 0;
+    }
+    .map-feedback .form-feedback{
+        width: 100%;
+        border-top:2px solid #ccc ;
+        border-bottom:2px solid #ccc ;
     }
     .footer .footer-nav{
         display: none;
