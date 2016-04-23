@@ -226,6 +226,9 @@
     .main-slider .arrow-down{
         display: none;
     }
+    .background-inner-page{
+        height: auto;
+    }
     .content .live-tile {
         height: 155px;
     }
