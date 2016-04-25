@@ -1,8 +1,28 @@
 .nopadding{
     padding: 0;
 }
+.hover-effect {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: visible;
+    background: rgba(238,238,238,0.67);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+/*Block Header*/
 .header{
     background: #fff;
+    position: relative;
+    z-index: 3;
 }
 .header .top-navigation{
     border: none;
@@ -30,6 +50,7 @@
     outline: none;
 }
 
+/*Block content*/
 .main-slider{
     position: relative;
     font-family: 'Raleway', sans-serif;
@@ -72,21 +93,54 @@
     color: #000;
     text-decoration: none;
 }
-.main-slider .arrow-down{
+.arrow-down{
     position: absolute;
     z-index: 2;
     bottom: 37px;
-    width: 100%;
-    text-align: center;
+    width: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
-.main-slider .arrow-down a{
+.arrow-down a{
     color: #fff;
     font-size: 52px;
+}
+.slider-project{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+}
+.slider-project .item{
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+.slider-project .owl-nav{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.slider-project .owl-nav .owl-prev,
+.slider-project .owl-nav .owl-next{
+    display: inline-block;
+    color: #fff;
+    background-color: #1c1c1c;
+    font-size: 18px;
+    line-height: 0;
+    padding: 16px 0;
+    width: 76px;
+    text-align: center;
 }
 .background-inner-page{
     height: 450px;
     background-attachment: fixed;
     background-repeat: no-repeat
+}
+.content{
+    position: relative;
+    z-index: 3;
+    background: #fff;
 }
 .content .live-tile {
     width: 50%;
@@ -94,8 +148,8 @@
     height: 295px;
 }
 .content .live-tile .background{
-    background-size: cover;
-    background-position:center;
+    background-size: cover !important;
+    background-position:center !important;
     height: 100%
 }
 .content .tile-group.four-wide, .content  .tile-strip.four-wide{
@@ -124,9 +178,59 @@
     font-weight: 500;
     margin-bottom: 45px;
 }
-
-.content-inner-page .text{
+.page-projects .title-block{
+    border-top: 3px solid #1c286b;
 }
+.page-projects .title-block .back a{
+    color: #777;
+    font-size: 30px;
+    line-height: 0;
+    padding-left: 25px;
+}
+.page-projects .project-items img{
+    width: 100%;
+}
+.page-projects .project-items .hover-effect {
+    padding: 30px 20px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+.page-projects .project-items .item a:hover .hover-effect{
+    opacity: 1;
+}
+.page-projects .description-project{
+    padding: 35px 0 140px 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+.page-projects .description-project .title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.page-projects .description-project .text{
+    font-size: 16px;
+    font-weight: 400;
+}
+.page-projects .contact-now{
+    padding: 40px 0 30px 0;
+    background-color: #37474f;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+.page-projects .contact-now .contact-now-btn{
+    font-size: 30px;
+    font-weight: 300;
+    border: 1px solid white;
+    border-radius: 36px;
+    margin-top: 50px;
+    color: #fff;
+    padding: 25px 40px;
+}
+/*Block feedback*/
 .map-feedback{
     padding: 120px 0;
     background: url("../images/map.jpg");
@@ -179,8 +283,10 @@
 }
 /*FOOTER*/
 .footer{
+    position: relative;
     padding: 20px 15px;
     background: #fff;
+    z-index: 3;
 }
 .footer .logo-footer img{
     max-width: 150px;

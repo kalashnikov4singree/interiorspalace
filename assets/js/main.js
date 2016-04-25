@@ -4,7 +4,9 @@
 function heightMainSlider(){
     var windowHeight = $(window).height();
     var heightNavbar = $('.top-navigation').innerHeight();
-    var item = $('.bg-slider .item').height(windowHeight - heightNavbar);
+    $('.bg-slider .item').height(windowHeight - heightNavbar);
+    $('.slider-project .item').height(windowHeight);
+    $('.page-projects-inner-page').css('margin-top', windowHeight)
 }
 function arrowDown(){
     $(".arrow-down").click(function (){
@@ -25,6 +27,17 @@ $(document).ready(function(){
         autoplay: true,
         mouseDrag: false,
         loop:true
+    });
+    $('.slider-project').owlCarousel({
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        items:1,
+        margin:30,
+        smartSpeed:450,
+        autoplay: false,
+        nav:true,
+        loop: true,
+        navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
     });
     $(".live-tile").liveTile();
     heightMainSlider();
